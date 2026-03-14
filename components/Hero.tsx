@@ -150,7 +150,7 @@ export function Hero({ slides, title, subtitle }: HeroProps) {
               fontWeight: 800,
             }}
           >
-            {title ? (
+            {false ? (
               <span className="block">{title}</span>
             ) : (
               <>
