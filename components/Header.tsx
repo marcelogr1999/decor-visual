@@ -63,9 +63,6 @@ export function Header() {
             className={`block w-5 h-0.5 bg-foreground transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
           />
         </button>
-        <div className="md:hidden">
-          <ThemeToggle />
-        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -94,6 +91,10 @@ export function Header() {
           >
             Contato
           </Link>
+          <div className="py-2 mt-2 border-t border-border/50 flex items-center justify-between">
+            <span className="text-sm text-muted-foreground">Alternar tema</span>
+            <ThemeToggle />
+          </div>
         </nav>
       </div>
     </header>
