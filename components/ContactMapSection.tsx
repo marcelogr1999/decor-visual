@@ -29,7 +29,7 @@ export function ContactMapSection({ settings }: ContactProps) {
         {/* Split Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden bg-card/60 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.05)]">
           {/* Left — Contact Info */}
-          <div className="p-8 sm:p-10 flex flex-col justify-center">
+          <div className="p-6 flex flex-col justify-center">
             <div className="space-y-6">
               {/* Phone */}
               <div>
@@ -38,7 +38,7 @@ export function ContactMapSection({ settings }: ContactProps) {
                 </p>
                 <a
                   href={`tel:${number}`}
-                  className="text-foreground hover:text-primary transition-colors inline-block"
+                  className="text-foreground hover:text-primary transition-colors inline-block break-words"
                 >
                   {settings?.phone || "(41) 99849-4501"}
                 </a>
@@ -51,7 +51,7 @@ export function ContactMapSection({ settings }: ContactProps) {
                 </p>
                 <a
                   href={`mailto:${settings?.email}`}
-                  className="text-foreground hover:text-primary transition-colors inline-block"
+                  className="text-foreground hover:text-primary transition-colors inline-block break-all sm:break-words"
                 >
                   {settings?.email || "decorvisualatendimento@gmail.com"}
                 </a>
@@ -66,7 +66,7 @@ export function ContactMapSection({ settings }: ContactProps) {
                   href={settings?.mapsEmbedUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground hover:text-primary transition-colors inline-block"
+                  className="text-foreground hover:text-primary transition-colors inline-block break-words"
                 >
                   {settings?.address || "Rua Guilherme Mazeto, 270 — Curitiba, PR"}
                 </a>
@@ -77,7 +77,7 @@ export function ContactMapSection({ settings }: ContactProps) {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-xl bg-primary text-muted text-sm font-semibold hover:bg-primary/80 transition-all"
+                className="inline-flex items-center justify-center gap-2 h-12 px-8 w-full lg:w-auto rounded-xl bg-primary text-muted text-sm font-semibold hover:bg-primary/80 transition-all"
               >
                 Solicitar orçamento
               </a>
