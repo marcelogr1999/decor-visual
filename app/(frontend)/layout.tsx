@@ -43,6 +43,9 @@ export async function generateMetadata(): Promise<Metadata> {
       "ACM",
       "Curitiba",
     ],
+    icons: {
+      icon: "/favicon.svg",
+    },
     openGraph: {
       type: "website",
       locale: "pt_BR",
@@ -84,7 +87,7 @@ export default async function RootLayout({
   } : null;
 
   return (
-    <html lang="pt-BR" className={`${sans.variable} ${display.variable}`}>
+    <html lang="pt-BR" className={`${sans.variable} ${display.variable}`} suppressHydrationWarning>
       <head>
         {jsonLd && (
           <script

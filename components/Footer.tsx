@@ -1,5 +1,8 @@
+"use client";
+
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 interface FooterProps {
   settings?: {
@@ -12,6 +15,12 @@ interface FooterProps {
 }
 
 export function Footer({ settings }: FooterProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const currentYear = new Date().getFullYear();
 
   return (
@@ -107,7 +116,7 @@ export function Footer({ settings }: FooterProps) {
         <Separator className="my-8" />
 
         <p className="text-center text-xs text-muted-foreground">
-          © {currentYear} {settings?.companyName || "DECOR Visual"}. Todos os direitos
+          © {mounted ? currentYear : "2024"} {settings?.companyName || "DECOR Visual"}. Todos os direitos
           reservados.
         </p>
       </div>
