@@ -23,7 +23,12 @@ export function Footer({ settings }: FooterProps) {
             <img
               src="/logo.svg"
               alt="DECOR Visual — Comunicação Visual"
-              className="h-10 w-auto mb-3"
+              className="h-10 w-auto mb-3 dark:hidden"
+            />
+            <img
+              src="/logo-white.svg"
+              alt="DECOR Visual — Comunicação Visual"
+              className="h-10 w-auto mb-3 hidden dark:block"
             />
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               {settings?.description || "Especialistas em comunicação visual."}

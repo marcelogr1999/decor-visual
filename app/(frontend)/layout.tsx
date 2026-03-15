@@ -4,6 +4,7 @@ import "../globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ThemeProvider } from "@/components/theme-provider";
 import { client } from "@/sanity/lib/client";
 import { SETTINGS_QUERY } from "@/sanity/lib/queries";
 import { urlForImage } from "@/sanity/lib/image";
@@ -93,10 +94,17 @@ export default async function RootLayout({
         )}
       </head>
       <body className="antialiased min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer settings={settings} />
-        <WhatsAppButton phone={settings?.phone} />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer settings={settings} />
+          <WhatsAppButton phone={settings?.phone} />
+        </ThemeProvider>
       </body>
     </html>
   );

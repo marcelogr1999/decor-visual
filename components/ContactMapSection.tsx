@@ -77,7 +77,7 @@ export function ContactMapSection({ settings }: ContactProps) {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-xl bg-primary text-white text-sm font-semibold hover:bg-primary/80 transition-all"
+                className="inline-flex items-center justify-center gap-2 h-12 px-8 rounded-xl bg-primary text-muted text-sm font-semibold hover:bg-primary/80 transition-all"
               >
                 Solicitar orçamento
               </a>

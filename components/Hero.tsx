@@ -185,14 +185,14 @@ export function Hero({ slides, title, subtitle }: HeroProps) {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-xl text-white/90 text-base font-medium transition-all duration-300 backdrop-blur-[8px] bg-chart-1  border border-chart-2bg-primary text-primary-foreground hover:bg-primary/90 hover:bg-primary hover:shadow-lg"
+              className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-xl text-secondary text-base font-medium transition-all duration-300 backdrop-blur-[8px] border border-ring bg-primary text-primary-foreground hover:bg-primary/80 hover:shadow-lg"
             >
               <span>Solicitar Orçamento</span>
             </a>
 
             <a
               href="#servicos"
-              className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-xl text-white/90 text-base font-medium transition-all duration-300 backdrop-blur-[8px] border border-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.15)] hover:shadow-lg"
+              className="inline-flex items-center justify-center gap-2 h-14 px-8 rounded-xl text-white text-base font-medium transition-all duration-300 backdrop-blur-[8px] border border-[rgba(255,255,255,0.15)] hover:bg-[rgba(255,255,255,0.15)] hover:shadow-lg"
             >
               Ver Serviços
             </a>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +15,12 @@ export function Header() {
           <img
             src="/logo.svg"
             alt="DECOR Visual"
-            className="h-10 w-auto"
+            className="h-10 w-auto dark:hidden"
+          />
+          <img
+            src="/logo-white.svg"
+            alt="DECOR Visual"
+            className="h-10 w-auto hidden dark:block"
           />
         </Link>
 
@@ -38,6 +44,7 @@ export function Header() {
           >
             Contato
           </Link>
+          <ThemeToggle />
         </nav>
 
         {/* Mobile Menu Button */}
@@ -56,6 +63,9 @@ export function Header() {
             className={`block w-5 h-0.5 bg-foreground transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
           />
         </button>
+        <div className="md:hidden">
+          <ThemeToggle />
+        </div>
       </div>
 
       {/* Mobile Menu */}

@@ -7,7 +7,7 @@ interface AboutProps {
 
 export function AboutSection({ aboutText, clients }: AboutProps) {
   return (
-    <section id="quem-somos" className="py-16 scroll-mt-20 bg-secondary-foreground">
+    <section id="quem-somos" className="py-16 scroll-mt-20 bg-brand-red">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center text-white">
           {/* Left — Text */}
@@ -38,7 +38,7 @@ export function AboutSection({ aboutText, clients }: AboutProps) {
           </div>
 
           {/* Right — Client Logos */}
-          <div className="bg-accent-foreground-5/50 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur-sm">
+          <div className="border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur-sm">
             <p className="text-xs uppercase tracking-[0.15em] text-white/70 font-semibold mb-6 text-center lg:text-left">
               Clientes que confiam em nós
             </p>
