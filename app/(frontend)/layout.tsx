@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { client } from "@/sanity/lib/client";
 import { SETTINGS_QUERY } from "@/sanity/lib/queries";
+import { urlForImage } from "@/sanity/lib/image";
 
 const sans = DM_Sans({
   variable: "--font-sans",
@@ -47,6 +48,14 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: settings.companyName,
       title: `${settings.companyName} — ${settings.tagline}`,
       description: settings.description,
+      images: settings.ogImage ? [
+        {
+          url: urlForImage(settings.ogImage).width(1200).height(630).url(),
+          width: 1200,
+          height: 630,
+          alt: settings.companyName,
+        }
+      ] : [],
     },
   };
 }

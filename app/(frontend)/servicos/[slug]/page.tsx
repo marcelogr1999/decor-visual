@@ -7,6 +7,8 @@ import { SERVICE_BY_SLUG_QUERY, ALL_SERVICES_QUERY } from "@/sanity/lib/queries"
 import { urlForImage } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
 
+export const revalidate = 60; // revalidate at most every 60 seconds
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }

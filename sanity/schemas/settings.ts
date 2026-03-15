@@ -20,6 +20,7 @@ export const settings = defineType({
       name: 'description',
       title: 'Descrição de SEO',
       type: 'text',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'phone',
@@ -40,6 +41,12 @@ export const settings = defineType({
       name: 'mapsEmbedUrl',
       title: 'URL do Google Maps (Embed)',
       type: 'url',
+    }),
+    defineField({
+      name: 'ogImage',
+      title: 'Imagem de Compartilhamento (OG Image)',
+      type: 'image',
+      description: 'Imagem que aparece quando o link é compartilhado (1200x630 recomendado)',
     }),
     defineField({
       name: 'socialLinks',

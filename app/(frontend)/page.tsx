@@ -6,6 +6,8 @@ import { client } from "@/sanity/lib/client";
 import { HOMEPAGE_QUERY, ALL_SERVICES_QUERY, ALL_CLIENTS_QUERY, SETTINGS_QUERY } from "@/sanity/lib/queries";
 import { urlForImage } from "@/sanity/lib/image";
 
+export const revalidate = 60; // revalidate at most every 60 seconds
+
 export default async function Home() {
   const [homepage, services, clients, settings] = await Promise.all([
     client.fetch(HOMEPAGE_QUERY),

@@ -9,6 +9,7 @@ export const SETTINGS_QUERY = groq`
     email,
     address,
     mapsEmbedUrl,
+    ogImage,
     socialLinks
   }
 `
