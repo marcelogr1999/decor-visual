@@ -20,24 +20,24 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          <a
-            href="#servicos"
+          <Link
+            href="/#servicos"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Serviços
-          </a>
-          <a
-            href="#quem-somos"
+          </Link>
+          <Link
+            href="/#quem-somos"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Quem Somos
-          </a>
-          <a
-            href="#contato"
+          </Link>
+          <Link
+            href="/#contato"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Contato
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -63,27 +63,27 @@ export function Header() {
         className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-48" : "max-h-0"}`}
       >
         <nav className="flex flex-col gap-1 px-6 pb-4">
-          <a
-            href="#quem-somos"
+          <Link
+            href="/#quem-somos"
             onClick={() => setMenuOpen(false)}
             className="py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Quem Somos
-          </a>
-          <a
-            href="#servicos"
+          </Link>
+          <Link
+            href="/#servicos"
             onClick={() => setMenuOpen(false)}
             className="py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Serviços
-          </a>
-          <a
-            href="#contato"
+          </Link>
+          <Link
+            href="/#contato"
             onClick={() => setMenuOpen(false)}
             className="py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Contato
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

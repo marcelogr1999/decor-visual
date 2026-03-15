@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 
 interface FooterProps {
   settings?: {
@@ -36,28 +37,28 @@ export function Footer({ settings }: FooterProps) {
             </h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#quem-somos"
+                <Link
+                  href="/#quem-somos"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   Quem Somos
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#servicos"
+                <Link
+                  href="/#servicos"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   Serviços
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#contato"
+                <Link
+                  href="/#contato"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   Contato
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -68,9 +69,32 @@ export function Footer({ settings }: FooterProps) {
               Contato
             </h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>{settings?.phone}</li>
-              <li>{settings?.email}</li>
-              <li className="leading-relaxed">{settings?.address}</li>
+              <li>
+                <a
+                  href={`tel:${settings?.phone.replace(/\D/g, "")}`}
+                  className="hover:text-primary transition-colors"
+                >
+                  {settings?.phone}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${settings?.email}`}
+                  className="hover:text-primary transition-colors"
+                >
+                  {settings?.email}
+                </a>
+              </li>
+              <li className="leading-relaxed">
+                <a
+                  href={settings?.address ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(settings.address)}` : "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  {settings?.address}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
